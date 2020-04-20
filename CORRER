@@ -1,0 +1,21 @@
+EJ1
+
+gcc -Wall -Werror -Wextra -pedantic -std=c99 -c counter.c
+gcc -Wall -Werror -Wextra -pedantic -std=c99 -o counter *.o main.c
+./counter input/balanced.in
+./counter input/onlyopen.in
+./counter input/moreopen.in
+
+ EJ 2
+
+gcc -Wall -Werror -Wextra -pedantic -std=c99 -c list.c array_helpers.c
+gcc -Wall -Werror -Wextra -pedantic -std=c99 -o average *.o main.c
+./average input/all-negative-100.in
+./average input/all-positive-100.in
+./average input/example-sorted.in
+./average input/empty.in
+./average input/example-unsorted.in
+
+gcc -Wall -Werror -Wextra -pedantic -std=c99 -g -c list.c array_helpers.c
+gcc -Wall -Werror -Wextra -pedantic -std=c99 -g -o average *.o main.c
+gdb ./average input/all-negative-100.in
